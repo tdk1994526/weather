@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qe7-0v-Q8f">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="sKB-yk-rtv">
+            <objects>
+                <navigationController id="Ce5-La-Gar" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="iFj-hC-6TY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QbP-7X-qTY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x7A-ew-h0H" kind="relationship" relationship="rootViewController" id="6gj-D0-Iu2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cav-jK-657" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6181.5" y="-2689.5"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="qlI-3r-7LM">
+            <objects>
+                <viewController storyboardIdentifier="bb" id="x7A-ew-h0H" customClass="mineViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2bH-tR-59A"/>
+                        <viewControllerLayoutGuide type="bottom" id="ybw-eh-LNE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="23D-o1-cMR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="tny-Of-iCj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_profile_normal.png" id="0zi-Dq-dJA"/>
+                    <navigationItem key="navigationItem" id="9BF-4I-Nou"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IV7-6U-HHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5111.5" y="-2785.5"/>
+        </scene>
+        <!--Chuanyi View Controller-->
+        <scene sceneID="TP7-Jx-dhC">
+            <objects>
+                <viewController storyboardIdentifier="aac" id="7gV-yf-leY" customClass="chuanyiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iKt-Af-L2d"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eiq-MC-dmg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7G5-t1-Z5G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fht-MG-1E8">
+                                <rect key="frame" x="83" y="176" width="210" height="30"/>
+                                <state key="normal" title="气温大于40°C"/>
+                                <connections>
+                                    <action selector="dayu40:" destination="7gV-yf-leY" eventType="touchUpInside" id="kYU-BG-kEF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVU-bz-nx7">
+                                <rect key="frame" x="83" y="236" width="210" height="30"/>
+                                <state key="normal" title="气温大于35°C"/>
+                                <connections>
+                                    <action selector="dayu35:" destination="7gV-yf-leY" eventType="touchUpInside" id="Psm-ve-okO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jot-jz-Mol">
+                                <rect key="frame" x="83" y="296" width="210" height="30"/>
+                                <state key="normal" title="气温25－34°C"/>
+                                <connections>
+                                    <action selector="action2534:" destination="7gV-yf-leY" eventType="touchUpInside" id="ba6-YM-umS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8n4-ak-icS">
+                                <rect key="frame" x="83" y="356" width="210" height="30"/>
+                                <state key="normal" title="气温15－24°C"/>
+                                <connections>
+                                    <action selector="action1524:" destination="7gV-yf-leY" eventType="touchUpInside" id="Dej-Hw-y7g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1rx-jr-dUQ">
+                                <rect key="frame" x="83" y="416" width="210" height="30"/>
+                                <state key="normal" title="气温5－14°C"/>
+                                <connections>
+                                    <action selector="action514:" destination="7gV-yf-leY" eventType="touchUpInside" id="FYk-Pu-g9Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrI-lg-erS">
+                                <rect key="frame" x="83" y="476" width="210" height="30"/>
+                                <state key="normal" title="气温零下5－4°C"/>
+                                <connections>
+                                    <action selector="action54:" destination="7gV-yf-leY" eventType="touchUpInside" id="4uE-Bn-T6z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEa-Cc-RpS">
+                                <rect key="frame" x="83" y="536" width="210" height="30"/>
+                                <state key="normal" title="气温小于零下5度°C"/>
+                                <connections>
+                                    <action selector="action5:" destination="7gV-yf-leY" eventType="touchUpInside" id="bPV-mi-dP5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="穿衣指南提醒您！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg4-TN-YVK">
+                                <rect key="frame" x="20" y="106" width="204" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvl-Am-E7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4487.5" y="-2769.5"/>
+        </scene>
+        <!--Shejiao View Controller-->
+        <scene sceneID="Kbr-Sz-PIj">
+            <objects>
+                <viewController storyboardIdentifier="shejiao" id="Occ-Bg-64v" customClass="shejiaoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FJe-Lg-F8z"/>
+                        <viewControllerLayoutGuide type="bottom" id="iTk-KE-y4q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dzt-vW-AWt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNO-ou-ztq">
+                                <rect key="frame" x="49" y="94" width="268" height="130"/>
+                                <state key="normal" title="Button" image="weiboa.jpg"/>
+                                <connections>
+                                    <action selector="weibo:" destination="Occ-Bg-64v" eventType="touchUpInside" id="6tR-SP-47D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoE-V7-jYQ">
+                                <rect key="frame" x="33" y="254" width="309" height="218"/>
+                                <state key="normal" title="Button" image="tengxun.jpg"/>
+                                <connections>
+                                    <action selector="weixin:" destination="Occ-Bg-64v" eventType="touchUpInside" id="EiC-a6-Wlo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TI-iH-f1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4039.5" y="-2777.5"/>
+        </scene>
+        <!--Shezhiqita View Controller-->
+        <scene sceneID="rnK-M6-Wmv">
+            <objects>
+                <viewController storyboardIdentifier="shezhiqita" id="iGY-kB-CZ5" customClass="shezhiqitaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wqs-fn-JBX"/>
+                        <viewControllerLayoutGuide type="bottom" id="f2Q-pZ-Gp5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A33-8k-9la">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBs-qe-4SW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3559.5" y="-2777.5"/>
+        </scene>
+        <!--最美风景-->
+        <scene sceneID="6tx-gG-xfa">
+            <objects>
+                <viewController id="SdN-4f-o7Q" customClass="NewFeatureControllerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8xc-Sj-HHD"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Yy-oh-Md5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hqL-fK-923">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RmH-CW-H17">
+                                <rect key="frame" x="0.0" y="6" width="375" height="659"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="rBx-Mc-sLZ">
+                                    <size key="itemSize" width="374" height="141"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MJCell" id="OOG-4T-Zqg" customClass="MJCollectionViewCell">
+                                        <rect key="frame" x="0.5" y="64" width="374" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="141"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="SdN-4f-o7Q" id="HUy-Cn-ARA"/>
+                                    <outlet property="delegate" destination="SdN-4f-o7Q" id="PnQ-iE-zLa"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="时景" image="tabbar_live_normal.png" id="Acd-cx-s2N"/>
+                    <navigationItem key="navigationItem" title="最美风景" id="ZHI-LI-RpQ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="parallaxCollectionView1" destination="RmH-CW-H17" id="aGM-SD-zCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVc-9w-qL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5037.5" y="-1997.5"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="GgJ-gY-L8F">
+            <objects>
+                <navigationController id="sjR-lJ-VMf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="h9S-ts-tax"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bwl-9V-CDh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SdN-4f-o7Q" kind="relationship" relationship="rootViewController" id="LGn-3g-hEx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RV-TH-a0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6163.5" y="-1853.5"/>
+        </scene>
+        <!--天气-->
+        <scene sceneID="Dv5-7V-8SE">
+            <objects>
+                <viewController id="1qt-kO-k4m" customClass="rootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ghP-hp-KOD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mhe-qn-vUT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lWk-aF-48u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="天气" image="tabbar_weather_normal@2x" id="fQF-C1-RXY"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91B-vk-4O8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6365.5" y="-3651.5"/>
+        </scene>
+        <!--天气-->
+        <scene sceneID="DdH-r3-Czb">
+            <objects>
+                <navigationController storyboardIdentifier="contentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BTY-46-bbD" userLabel="天气" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="7hp-AK-XV1"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J9e-4h-7s6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ITz-f7-VUT" kind="relationship" relationship="rootViewController" id="8VE-SD-SGR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDR-As-hLn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5567.5" y="-3695.5"/>
+        </scene>
+        <!--天气预报-->
+        <scene sceneID="B8n-MM-8jI">
+            <objects>
+                <viewController storyboardIdentifier="firstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ITz-f7-VUT" customClass="weatherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HxD-ZG-f8o"/>
+                        <viewControllerLayoutGuide type="bottom" id="dpw-K0-J86"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fgo-8x-Unw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="天气" image="tabbar_weather_normal.png" id="TBq-o0-eSy"/>
+                    <navigationItem key="navigationItem" title="天气预报" id="diG-Hv-bIk">
+                        <barButtonItem key="leftBarButtonItem" image="ahomepage_leftitem_dark.png" id="Yq0-41-9T3">
+                            <connections>
+                                <action selector="presentLeftMenuViewController:" destination="ITz-f7-VUT" id="bQS-iT-H92"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="right_button_share_blue.png" id="kTv-sf-7aO">
+                            <connections>
+                                <action selector="shareButton:" destination="ITz-f7-VUT" id="HGe-iL-1sK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brV-kp-nXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5180.5" y="-3796.5"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="eCW-IL-nUO">
+            <objects>
+                <viewController restorationIdentifier="leftMenuViewController" storyboardIdentifier="leftMenuViewController" id="Grp-SR-0m8" customClass="leftViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1pe-3Q-Baj"/>
+                        <viewControllerLayoutGuide type="bottom" id="bat-ao-T7j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rUE-xK-9NO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fD2-F3-7Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4521.5" y="-3617.5"/>
+        </scene>
+        <!--Tianjia View Controller-->
+        <scene sceneID="1l7-V9-w9k">
+            <objects>
+                <viewController storyboardIdentifier="tianjia" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6LA-aJ-2ed" customClass="tianjiaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fdW-dO-iKe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ekk-ka-Ikp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vbI-zh-hYu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="scoller.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-f7-Meq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="169"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="热门城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPm-IS-F4D">
+                                <rect key="frame" x="152" y="223" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4Q-e3-MLI">
+                                <rect key="frame" x="49" y="276" width="30" height="30"/>
+                                <state key="normal" title="定位"/>
+                                <connections>
+                                    <action selector="dingwei:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="nbb-7R-wK4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d23-YW-9Th">
+                                <rect key="frame" x="165" y="276" width="45" height="30"/>
+                                <state key="normal" title="成都市"/>
+                                <connections>
+                                    <action selector="chengdu:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="MTv-qf-uEw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggx-ex-clR">
+                                <rect key="frame" x="283" y="276" width="45" height="30"/>
+                                <state key="normal" title="天津市"/>
+                                <connections>
+                                    <action selector="tianjing:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="RZX-nL-n7K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEK-IG-dFk">
+                                <rect key="frame" x="42" y="337" width="45" height="30"/>
+                                <state key="normal" title="上海市"/>
+                                <connections>
+                                    <action selector="shanghai:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="aoe-aH-OtW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n50-8V-nUq">
+                                <rect key="frame" x="165" y="337" width="45" height="30"/>
+                                <state key="normal" title="重庆市"/>
+                                <connections>
+                                    <action selector="chongqing:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="45A-uV-W95"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUI-Ab-Jny">
+                                <rect key="frame" x="283" y="337" width="45" height="30"/>
+                                <state key="normal" title="沈阳市"/>
+                                <connections>
+                                    <action selector="shengyang:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="2Ua-Vt-Vz1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEA-B6-7mh">
+                                <rect key="frame" x="283" y="399" width="45" height="30"/>
+                                <state key="normal" title="广州市"/>
+                                <connections>
+                                    <action selector="guangzhou:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="7Kp-7L-c5s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOa-08-FmJ">
+                                <rect key="frame" x="42" y="399" width="45" height="30"/>
+                                <state key="normal" title="大连市"/>
+                                <connections>
+                                    <action selector="dalian:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="lY8-Fe-9p6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="app-iF-7SJ">
+                                <rect key="frame" x="165" y="399" width="45" height="30"/>
+                                <state key="normal" title="南京市"/>
+                                <connections>
+                                    <action selector="nanjing:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="FLl-Xe-jOi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDn-N2-gdx">
+                                <rect key="frame" x="275" y="466" width="60" height="30"/>
+                                <state key="normal" title="哈尔滨市"/>
+                                <connections>
+                                    <action selector="haerbing:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="LiY-yb-Gcn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGL-cr-We1">
+                                <rect key="frame" x="165" y="466" width="45" height="30"/>
+                                <state key="normal" title="郑州市"/>
+                                <connections>
+                                    <action selector="zhengzhou:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="1Io-Xj-yIq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0A-Wr-f2o">
+                                <rect key="frame" x="0.0" y="7" width="30" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="x"/>
+                                <connections>
+                                    <action selector="dingwei:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="LF9-we-KxX"/>
+                                    <action selector="guanbi:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="Gb1-Xm-ZeI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rh7-qp-Ruf">
+                                <rect key="frame" x="42" y="466" width="45" height="30"/>
+                                <state key="normal" title="武汉市"/>
+                                <connections>
+                                    <action selector="wuhan:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="SX6-cc-lZB"/>
+                                    <action selector="zhengzhou:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="EZn-JD-vKj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="其他城市：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IV-xt-Qir">
+                                <rect key="frame" x="10" y="177" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94R-fA-PMY">
+                                <rect key="frame" x="310" y="173" width="30" height="30"/>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <action selector="tianjiaButton:" destination="6LA-aJ-2ed" eventType="touchUpInside" id="QJS-mU-W44"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ro-QQ-j6A">
+                                <rect key="frame" x="113" y="173" width="181" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chengshiText" destination="6ro-QQ-j6A" id="t2G-G7-N11"/>
+                        <outlet property="image" destination="7HP-f7-Meq" id="Epq-p9-D8E"/>
+                        <outlet property="searchDisplayController" destination="wGn-UA-h2R" id="mkF-RK-Yyp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mat-ch-kAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="wGn-UA-h2R">
+                    <connections>
+                        <outlet property="delegate" destination="6LA-aJ-2ed" id="Lat-TW-8qm"/>
+                        <outlet property="searchContentsController" destination="6LA-aJ-2ed" id="xhK-ao-tZN"/>
+                        <outlet property="searchResultsDataSource" destination="6LA-aJ-2ed" id="pRp-SL-vRj"/>
+                        <outlet property="searchResultsDelegate" destination="6LA-aJ-2ed" id="SDk-Ga-bBo"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-3839.5" y="-3671.5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jeZ-OI-IZW">
+            <objects>
+                <tabBarController storyboardIdentifier="fanhui" id="qe7-0v-Q8f" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WwU-Py-MAo"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="r1B-Lv-IQq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1qt-kO-k4m" kind="relationship" relationship="viewControllers" id="Cs2-aK-ELP"/>
+                        <segue destination="sjR-lJ-VMf" kind="relationship" relationship="viewControllers" id="cvt-GK-zhh"/>
+                        <segue destination="Ce5-La-Gar" kind="relationship" relationship="viewControllers" id="teZ-6Y-Fit"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JY3-44-n9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6895.5" y="-2585.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ahomepage_leftitem_dark.png" width="36" height="36"/>
+        <image name="right_button_share_blue.png" width="36" height="36"/>
+        <image name="scoller.jpg" width="450" height="262"/>
+        <image name="tabbar_live_normal.png" width="27" height="23"/>
+        <image name="tabbar_profile_normal.png" width="27" height="23"/>
+        <image name="tabbar_weather_normal.png" width="27" height="23"/>
+        <image name="tabbar_weather_normal@2x" width="128" height="40"/>
+        <image name="tengxun.jpg" width="395" height="300"/>
+        <image name="weiboa.jpg" width="500" height="299"/>
+    </resources>
+</document>
